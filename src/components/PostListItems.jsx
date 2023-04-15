@@ -26,8 +26,8 @@ const PostListItems = ({deleteRecord}) => {
         <td>#{++index}</td>
         <td><Link to={`/post/${item.id}`}>{item.title}</Link></td>
         <td>
-        <ButtonGroup aria-label="Basic example">
-            <Button variant="success" onClick={() => (navigate(`post/${item.id}/edit`))}>Edit</Button>
+        <ButtonGroup className="p-1 " aria-label="Basic example">
+            <Button variant="success" disabled={!isLoggedIn}  onClick={() => (navigate(`post/${item.id}/edit`))}>Edit</Button>
             
             <Button
             variant="danger"

@@ -7,7 +7,13 @@ const authSlice = createSlice({
 
     reducers:{
 
+        LoggedToggle(state) {
+            state.isLoggedIn = !state.isLoggedIn
+        },
+
     }
 })
+
+export const { LoggedToggle } = authSlice.actions;
 
 export default authSlice.reducer;
